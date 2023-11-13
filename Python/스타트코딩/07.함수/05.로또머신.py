@@ -5,4 +5,4 @@
 import random 
 
 def getRandomNumber():
-    number = random.randint(1,45):
+    number = random.randint(1,45)
