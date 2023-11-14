@@ -9,7 +9,9 @@ class Monster:
 # 객체 = 클래스 이름()  
 shark = Monster('상어', 7)
 wolf = Monster('늑대', 3)
+fox = Monster('여우', 5)
 
 # 객체.메서드() #'.'은 '~의'로 해석하는게 좋음
 shark.say()
 wolf.say()
+fox.say()
