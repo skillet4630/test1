@@ -1,3 +1,4 @@
+# class : 제품의 기본 설계도
 class Monster:
     def __init__(self, name, age):
         self.name = name
