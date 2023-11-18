@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pyautogui # 터미널에 pip install pyautogui 설치
 
-keyward = pyautogui.prompt("검색어를 입력하세요>>>")
+keyward = pyautogui.prompt("검색어를 입력하세요")
 response = requests.get(f"https://search.naver.com/search.naver?where=news&sm=tab_jum&query={keyward}") # f스트링
 html = response.text
 
