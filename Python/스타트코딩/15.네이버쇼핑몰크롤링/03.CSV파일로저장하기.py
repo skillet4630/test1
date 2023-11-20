@@ -56,7 +56,7 @@ while True:
 
     before_h = after_h
 
-# 파일 생성.
+# 파일 생성
 f = open(r"C:\source\startcoding\startcoding_crawling\03_네이버_쇼핑_크롤링\data.csv", 'w', encoding='CP949', newline='')
 csvWriter = csv.writer(f)
 
