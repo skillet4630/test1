@@ -1,4 +1,4 @@
-# 터미널에 라이브러리 설치 pip install selenium
+# 터미널에 라이브러리 설치 pip install selenium/
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
