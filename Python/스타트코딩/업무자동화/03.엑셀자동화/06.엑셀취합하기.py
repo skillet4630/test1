@@ -22,3 +22,17 @@ for file in file_list:
         for cell in row:
             data.append(cell.value)
         total_ws.append(data)
+
+# # 순번 업데이트(첫번째 방법)
+# for row in total_ws.iter_rows(min_row=2, max_col=1):
+#     for cell in row:
+#         cell.value = row[0].row - 1
+        
+# 순번 업데이트(두번쨰 방법)
+i = 0
+for cell in total_ws['A']:
+    if i !=0:
+        cell.value = i
+    i = i + 1
+        
+total_wb.save('Python/스타트코딩/업무자동화/03.엑셀자동화/total.xlsx')
