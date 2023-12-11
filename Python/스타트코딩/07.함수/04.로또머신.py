@@ -4,7 +4,7 @@
 #4.로또 번호 생성함수를 작성하고 사용한다
 import random 
 
-lotto_num = [] #빈 로또 번호 히스트 생성
+lotto_num = [] #빈 로또 번호 리스트 생성
 
 def getRandomNumber():
     number = random.randint(1,45)
