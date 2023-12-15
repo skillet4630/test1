@@ -1,27 +1,20 @@
-import requests
-from bs4 import BeautifulSoup
+import random 
 
-def crawl_page(url):
-    response = requests.get(url)
-    if response.status_code != 200:
-        return None
+lotto_num = [] #빈 로또 번호 리스트 생성
 
-    soup = BeautifulSoup(response.text, 'html.parser')
-    return soup.find_all('a', {'title': lambda x: x and 'Public' in x})
+def getRandomNumber():
+    number = random.randint(1,45)
+    return number
 
-def main():
-    base_url = "https://rargb.to/"
-    search_query = "publicagent 1080p x265"
-    search_url = f"{base_url}search/1/?search={search_query}"
+count = 0 # 횟수를 저장할 변수
 
-    search_results = crawl_page(search_url)
+#무한반복
+while True:
+    if count > 5:
+        break
+    random_number = getRandomNumber() # 로또 번호 하나를 뽑는다
+    if random_number not in lotto_num: # 로또 번호 리스트 안에 뽑은 로또 번호가 없으면
+        lotto_num.append(random_number) # 로또 번호 히스트에 뽑은 로또 번호를 추가해라
+        count = count + 1
 
-    if not search_results:
-        print("No results found.")
-        return
-
-    for link in search_results:
-        print(f"Title: {link['title']}")
-
-if __name__ == "__main__":
-    main()
+print(lotto_num)
