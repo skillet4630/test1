@@ -1,4 +1,4 @@
-
+# https 주로가 채계적으로 잡혀있는 사이트 크롤링 예
 import os
 import requests
 from bs4 import BeautifulSoup
